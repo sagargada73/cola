@@ -231,8 +231,15 @@ model-viewer#cola{
         max-width: 100%;
         margin-top: 100px;
     }
-    .container2 .right{
+    .container2{
         margin-top: 100px;
+        height: 100vh;
+        display: flex;
+    justify-content: center;
+    flex-direction: column;
+    }
+    .container2 .right{
+        margin-top: 200px;
         width: 100%;
         transform: translateX(0);
 
