@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Ubuntu', sans-serif;
+    color: #fff;
+    box-sizing: border-box;
+}
+model-viewer::part(default-progress-bar){
+    display: none;
+}
+model-viewer::part(default-ar-button){
+    display: none;
+}
+.fab {
+    display: none!important;
+}
+#preloader {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(#f0483a,#d10a20);
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#status {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: -100px 0 0 -100px;
+}
+body{
+    background: radial-gradient(#f0483a,#d10a20);
+    overflow-x: hidden;
+    
+}
+header{
+    position: absolute;
+    top:0;
+    left: 0;
+    padding: 30px 100px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 9;
+}
+header .logo{
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 14px;
+}
+header ul{
+    display: flex;
+    justify-content: space-between;
+}
+header ul li{
+    list-style: none;
+    margin-left: 20px;
+}
+header ul li a{
+    color: white;
+    text-decoration: none;
+    padding: 6px 15px;
+    border-radius: 20px;
+}
+header ul li a:hover{
+    background: #fff;
+    color: #2b1055;
+}
+.container{
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+model-viewer#cola{
+    position: absolute;
+    top: 80px;
+    padding-right:5%;
+    width: 700px;
+    height: 600px;
+    right: 0;
+}
+.container .left{
+    padding: 7%;
+    max-width: 50%;
+}
+.container .left h1{
+    font-size: 3.5rem;
+    letter-spacing: 0.2rem;
+    line-height: 1;
+}
+.container .left h2{
+    padding-top: 10px;
+    font-size: 2rem;
+    font-weight: 400;
+}
+@media only screen and (max-width: 1024px) {
+    model-viewer#cola{
+    height: 450px;
+    width: 600px;
+    padding-right:0;
+    }
+    .container .left h1{
+        font-size: 2.5rem;
+    }
+    .container .left h2{
+        padding-top: 10px;
+        font-size: 2rem;
+    }
+}
+.container2{
+    position: relative;
+    padding:0 7% 7%;
+}
+.container2 h1{
+    font-size: 3rem;
+}
+.container2 h2{
+    font-size: 2.5rem;
+    font-weight: 400;
+}
+.container2 .text{
+    width: 100%;
+}
+.container2 .right{
+    transform: translateX(100%);
+    width: 50%;
+    text-align: right;
+}
+@media only screen and (max-width: 1024px) {
+    .container2 h1{
+        font-size: 2.7rem;
+    }
+    .container2 h2{
+        padding-top: 10px;
+        font-size: 2rem;
+    }
+}
+.container3{
+    position: relative;
+}
+.container3 model-viewer#cola3{
+    display: none;
+    position: absolute;
+    right: 30%;
+    width: 700px;
+    height: 600px;
+    z-index: 3;
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coca Cola</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+
+</head>
+
+<body>
+    <div id="preloader">
+        <div class="loader">
+            <img src="assets/load.gif" alt="" srcset="">
+        </div>
+    </div>  
+    <div id="content">
+
+    <header id="header">
+        <a href="#" class="logo"><img src="assets/logo.png" width="100px" alt="" srcset=""></a>
+        <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">About Us</a></li>
+            <li><a href="">Contact Us</a></li>
+        </ul>
+    </header>
+    <div class="container">
+
+        </model-viewer>
+        <model-viewer id="cola" loading="eager" orientation="-20deg 0 0" bounds="tight" shadow-intensity="1" ar
+            ar-modes="webxr scene-viewer quick-look"  src="assets/simple_cola_can/scene.gltf" ios-src="assets/simple_cola_can.usdz"></model-viewer>
+
+        <div class="left">
+            <div class="text">
+
+                <h1>
+                    Refreshing the World and Making a Difference
+                </h1>
+                <h2>
+                    Working together to create a better shared future for our people, our communities and our planet
+                </h2>
+            </div>
+        </div>
+    </div>
+    <div class="container2">
+        <div class="text">
+            <div class="right">
+                <h1>
+
+                    Creating a more sustainable business
+                    From reducing sugar to our vision for a World Without Waste
+                </h1>
+                <br>
+                <h2>
+                    Working toward a better shared future
+                    Making a difference in people’s lives, communities and our planet
+                </h2>
+            </div>
+        </div>
+    </div>
+</div>
+    <script src="script.js"></script>
+</body>
+    
+</html>
