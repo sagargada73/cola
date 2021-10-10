@@ -12,16 +12,16 @@ var scrollSpeed = 1;
 var windowType = "big"
 const cola = document.querySelector("model-viewer#cola");
 window.addEventListener('load', function () {
-    if (this.window.innerHeight <= 640) {
+    if (window.visualViewport.width <= 640) {
         windowType = "small";
         scrollSpeed = 1;
         cola.orientation = `-90deg 0deg ${yaw}deg`;
     }
-    else if (this.window.innerWidth <= 1024) {
+    else if (window.visualViewport.width <= 1024) {
         scrollSpeed = .7;
         windowType = "big";
         cola.orientation = `-20deg 0deg ${yaw}deg`;
-    } else if (this.window.innerWidth = 1440) {
+    } else if (window.visualViewport.width = 1440) {
         scrollSpeed = 1.3;
         windowType = "big";
         cola.orientation = `-20deg 0deg ${yaw}deg`;
@@ -30,7 +30,7 @@ window.addEventListener('load', function () {
 var yaw = ''
 var flag = 1;
 document.addEventListener('scroll', function (e) {
-    var winCan = window.innerWidth - cola.offsetWidth;
+    var winCan = window.visualViewport.width - cola.offsetWidth;
     if (windowType == "big") {
         if (flag == 1) {
             cola.style.right = scrollSpeed * window.scrollY + 'px';
