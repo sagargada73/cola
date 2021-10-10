@@ -162,3 +162,93 @@ model-viewer#cola{
     height: 600px;
     z-index: 3;
 }
+
+@media(max-width:780px){
+    .navigation{
+        display: none;
+    }
+    header{
+        padding: 20px;
+    }
+    .toggle{
+        width: 32px;
+        height: 40px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        cursor: pointer;
+        z-index: 10;
+    }
+    .toggle.active {
+        position: fixed;
+        right: 20px;
+        /* overflow-y: hidden; */
+    }
+    .toggle::before{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background: #fff;
+        transform: translateY(0px);
+        box-shadow: 0 10px 0 #fff;
+        transition: .25s;
+    }
+    .toggle.active::before{
+        transform: translateY(10px) rotate(45deg);
+        box-shadow: 0 0px 0 #fff;
+    }
+    .toggle::after{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background: #fff;
+        transform: translateY(20px);
+        transition: .25s;
+    }
+    .toggle.active::after{
+        transform: translateY(10px) rotate(-45deg);
+    }
+    .navigation.active{
+        top:0;
+        left: 0;
+        display: flex;
+        position: fixed;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        background: #d10a20;
+        color: white;
+    }
+    .navigation li a{
+        font-size: 1.5rem;
+        display: inline-block;
+    } 
+    .container .left{
+        max-width: 100%;
+        margin-top: 100px;
+    }
+    .container2 .right{
+        margin-top: 100px;
+        width: 100%;
+        transform: translateX(0);
+
+    }
+    .container2 h1,.container h1{
+        font-size: 2rem;
+    }
+    .container2 h2,.container h2{
+        font-size: 1rem!important;
+        letter-spacing: 0.2rem;
+    }
+    model-viewer#cola {
+        top:20px;
+        height: 260px;
+        width: 80vw;
+        right: 50%;
+        transform: translateX(50%);
+    }
+}
